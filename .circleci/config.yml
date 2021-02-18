@@ -9,7 +9,7 @@ jobs:
       - run: apt-cache policy
       - run: ruby -v
       - run: gem install bundler
-      - run: bundle
+      - run: bundle install
           
           
       - sonarcloud/scan
