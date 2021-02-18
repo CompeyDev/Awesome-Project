@@ -6,6 +6,7 @@ jobs:
       - image: cimg/ruby:2.6.5
     steps:
       - checkout
+      - run: apt-cache policy
       - run: sudo apt install ruby-full
       - run: gem install bundler
       - run: bundle
