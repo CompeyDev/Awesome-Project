@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: apt-cache policy
-      - run: sudo apt install ruby-full
+      - run: ruby -v
       - run: gem install bundler
       - run: bundle
           
