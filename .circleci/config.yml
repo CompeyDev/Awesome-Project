@@ -7,9 +7,10 @@ jobs:
     steps:
       - checkout
       - run: apt-cache policy
-      - run: sudo apt-add-repository https://us.archive.ubuntu.com
+      - run: sudo apt install curl
+      - run: curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+      - run: sudo apt update
       - run: sudo apt install nodejs
-      - run: sudo apt install npm
       - run: nodejs --version
       - run: npm --version
       - run: ruby -v
