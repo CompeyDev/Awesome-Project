@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run: apt-cache policy
+      - run: sudo apt install nodejs
+      - run: nodejs --version
+      - run: npm --version
       - run: ruby -v
       - run: gem install bundler
       - run: bundle install
