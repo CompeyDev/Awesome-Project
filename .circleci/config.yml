@@ -6,10 +6,12 @@ jobs:
       - image: cimg/ruby:2.6.5
     steps:
       - checkout
+      - run: sudo apt update ; sudo apt upgrade
       - run: apt-cache policy
       - run: ruby -v
       - run: gem install bundler
       - run: bundle install
+      - run: bundle exec jekyll serve
           
           
       - sonarcloud/scan
