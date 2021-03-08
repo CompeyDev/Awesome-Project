@@ -11,7 +11,6 @@ jobs:
       - run: ruby -v
       - run: gem install bundler
       - run: bundle install
-      - run: bundle exec jekyll serve --host 185.199.108.153
           
           
       - sonarcloud/scan
