@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.6.5
+      - image: cimg/ruby:2.7.5
     steps:
       - checkout
       - run: apt-cache policy
